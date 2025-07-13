@@ -11,13 +11,13 @@ import joblib # Import library joblib untuk menyimpan scaler
 
 # --- 1. Konfigurasi dan Pengaturan ---
 # Ganti dengan jalur file CSV data saham Anda
-DATA_FILE = 'data_saham_multivariable.csv'
+DATA_FILE = 'training-data_saham_multivariable.csv'
 # Kolom yang akan digunakan sebagai fitur (input X)
 FEATURES = ['Open', 'High', 'Low', 'Volume', 'Close'] # Contoh: Harga Pembukaan, Tertinggi, Terendah, Volume, Penutupan
 # Kolom yang akan diprediksi (target Y)
 TARGET = 'Close'
 # Ukuran jendela waktu (timesteps) untuk LSTM
-N_TIMESTEPS = 60 # Menggunakan 60 hari/periode data sebelumnya untuk memprediksi 1 hari/periode berikutnya
+N_TIMESTEPS = 10 # Menggunakan 10 hari/periode data sebelumnya untuk memprediksi 1 hari/periode berikutnya
 # Rasio pembagian data training dan testing
 TEST_SIZE = 0.2
 # Epoh pelatihan model
